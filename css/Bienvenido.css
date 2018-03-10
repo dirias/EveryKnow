@@ -1,0 +1,15 @@
+.updateFotoFT, .datosAdicionales
+{
+  height: 400px;
+}
+.tutorial
+{
+  height: 250px;
+}
+
+#errorMSJ
+{
+  color: red;
+  font-size: 18px;
+
+}

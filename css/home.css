@@ -1,0 +1,21 @@
+.profile
+{
+  box-shadow: 2px 4px 5px #999;
+  height: 500px;
+}
+.menu
+{
+  box-shadow: 2px 4px 5px #999;
+  height: 500px;
+}
+.verdeC
+{
+    background: rgba(82,255,87,1);
+    background: -moz-linear-gradient(left, rgba(82,255,87,1) 0%, rgba(82,255,87,1) 0%, rgba(122,215,255,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(82,255,87,1)), color-stop(0%, rgba(82,255,87,1)), color-stop(100%, rgba(122,215,255,1)));
+    background: -webkit-linear-gradient(left, rgba(82,255,87,1) 0%, rgba(82,255,87,1) 0%, rgba(122,215,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(82,255,87,1) 0%, rgba(82,255,87,1) 0%, rgba(122,215,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(82,255,87,1) 0%, rgba(82,255,87,1) 0%, rgba(122,215,255,1) 100%);
+    background: linear-gradient(to right, rgba(82,255,87,1) 0%, rgba(82,255,87,1) 0%, rgba(122,215,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52ff57', endColorstr='#7ad7ff', GradientType=1 );
+}

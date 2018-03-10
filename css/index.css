@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding: 0;
+    font: "Helvetica";
+}
+body
+{
+    background-image: url(../Resources/FondoGris.PNG)
+}
+
+header
+{
+    color:azure;
+    background-color: black;
+    padding: 8px;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right:20px;
+    cursor: pointer;
+    padding-top: 5px;
+    margin-top:20px;
+}
+nav ul li:hover
+{
+    color: #35F582;
+
+}
+header > form
+{
+   margin-top:15px;
+}
+
+.icono
+{
+    height: 500px;
+}
+.formregistrar
+{
+
+    box-shadow: 2px 4px 5px #999;
+    height: 500px;
+}
+.verdeC
+{
+    background: rgba(82,255,87,1);
+    background: -moz-linear-gradient(left, rgba(82,255,87,1) 0%, rgba(82,255,87,1) 0%, rgba(122,215,255,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(82,255,87,1)), color-stop(0%, rgba(82,255,87,1)), color-stop(100%, rgba(122,215,255,1)));
+    background: -webkit-linear-gradient(left, rgba(82,255,87,1) 0%, rgba(82,255,87,1) 0%, rgba(122,215,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(82,255,87,1) 0%, rgba(82,255,87,1) 0%, rgba(122,215,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(82,255,87,1) 0%, rgba(82,255,87,1) 0%, rgba(122,215,255,1) 100%);
+    background: linear-gradient(to right, rgba(82,255,87,1) 0%, rgba(82,255,87,1) 0%, rgba(122,215,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52ff57', endColorstr='#7ad7ff', GradientType=1 );
+}
+strong > a
+{
+    cursor: pointer;
+    margin-left: 40px;
+}
