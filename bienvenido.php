@@ -33,8 +33,13 @@
            </div>
          </div>
          <textarea name="intereses" placeholder="Intereses propios" class="form-control form-group" rows="5" style="resize:none;"></textarea>
-         <div class="col-md-4">
-           <input type="submit" name="Guardar" value="Guardar datos" class="btn btn-success" >
+         <div class="col-md-8">
+           <br>
+           <div class="btn-group" role="group">
+             <input type="submit" name="Guardar" value="Guardar datos" class="btn btn-success" >
+             <input type="button" name="omitir" class="btn btn-success" value="Omitir configuración">
+             <input type="button" name="Que" class="btn btn-success" value="?" data-toggle="modal" data-target="#info">
+           </div>
          </div>
          <div class="col-md-8">
            <p id="errorMSJ"></p>
@@ -90,8 +95,13 @@
             {
               $id = getID($_SESSION["usuario"]);
               $query = "INSERT INTO pu(id,saludo,fotoPerfil,gradoAcademico,pais,intereses)
-              value('".$id."','".$_POST['saludo']."',' ".$_FILES['pic']['name']."',' ".$_POST['ocupacion']."',' ".$_POST['pais']."',' ".$_POST['intereses']."')";
-              //echo $query;
+              value('".$id."','".$_POST['saludo']."',' ".$_FILES['pic']['name']."',' ".$_POST['ocupacion']."',
+              ' ".$_POST['pais']."',' ".$_POST['intereses']."')";
+              #registro los datos de la tabla PerfilUsuario(PU)
+              registrarDatos($query);
+              #registro los datos de la tabla fotosusers
+              $query = "INSERT INTO fotosusers(id,foto,category)
+              value('".$id."','".$_FILES['pic']['name']."','".'intereses'."')";
               registrarDatos($query);
               if(true)
               {
@@ -102,15 +112,6 @@
           ?>
      </div>
      <br>
-     <div class="row">
-       <div class="col-md-4 col-md-offset-8">
-         <div class="btn-group" role="group">
-           <input type="button" name="omitir" class="btn btn-success" value="omitir configuración">
-           <input type="button" name="Finalizar" class="btn btn-success " value="Finalizar configuración">
-           <input type="button" name="Que" class="btn btn-success" value="?" data-toggle="modal" data-target="#info">
-         </div>
-       </div>
-     </div>
      <br>
      <div class="row">
        <section class="tutorial col-xs-12 col-ms-12 col-md-12 verdeC">
@@ -119,23 +120,6 @@
      </div>
      <br>
    </main>
- <!--  <input type="checkbox" id="cerrar">
-   <label for="cerrar" id="btn-cerrar">X</label>
-   <div class="modal">
-        <div class="contenido">
-           <div class="model-header"><h2>Casi terminamos!</h2></div>
-            <div>
-                Puedes terminar de agregar tu información personal
-                desde acá para finalizarlar la configuración de tu
-                cuenta hora mismo, o puedes hacerlo luego.
-            </div>
-
-
-        </div>
-   </div>-->
-
-
-<!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
